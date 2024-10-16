@@ -1,0 +1,9 @@
+"""
+有字符串：“万过薪月，员序程马黑来，nohtyP学”
+"""
+my_str="万过薪月，员序程马黑来，nohtyP学"
+print(len(my_str))
+goat_str=my_str[len(my_str):2:-1]#下标也要反向标记，从某个结束，切完不包括此元素
+#一般全部倒序，不填开始和结束下标，会自动从头到尾
+print(my_str)
+print(goat_str)

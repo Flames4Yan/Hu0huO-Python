@@ -1,7 +1,7 @@
 acount=0
 name="Hu0huO"
 choose=0
-def getAcount():
+def atm_get_acount():
     print("---------------查询余额---------------")
     global acount
     print(f"{name},您好，您的余额剩余：{acount}")
@@ -9,23 +9,23 @@ def getAcount():
 def deposit():
     global acount
     print("-----------------存款----------------")
-    inMoney=int(input("您存款的金额为："))
-    acount=acount+inMoney
+    in_money=int(input("您存款的金额为："))
+    acount=acount+in_money
     print(f"{name},您好，您的余额剩余：{acount}")
 
 
-def withdraw():
+def atm_withdraw():
     global acount
     print("-----------------取款----------------")
-    outMoney=int(input("您取款的金额为："))
-    if acount>=outMoney:
-       acount=acount-outMoney
+    out_money=int(input("您取款的金额为："))
+    if acount>=out_money:
+       acount=acount-out_money
     else:
         print("很抱歉，您的余额不足")
     print(f"{name},您好，您的余额剩余：{acount}")
 
 
-def menuFunction():
+def atm_menu():
     """
 
 
@@ -38,14 +38,14 @@ def menuFunction():
       print("存款   \t[输入2]")
       print("取款   \t[输入3]")
       print("退出   \t[输入4]")
-      choose=int(input("请输入你的选择："))
-      if choose==1:
-         getAcount()
-      elif choose==2:
+      which_function=int(input("请输入你的选择："))
+      if which_function==1:
+         atm_get_acount()
+      elif which_function==2:
          deposit()
-      elif choose==3:
-         withdraw()
-      elif choose==4:
+      elif which_function==3:
+         atm_withdraw()
+      elif which_function==4:
           return None
 #菜单运行
-menuFunction()
+atm_menu()

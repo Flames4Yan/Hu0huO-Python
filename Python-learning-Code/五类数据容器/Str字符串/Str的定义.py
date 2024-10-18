@@ -7,7 +7,7 @@ valeue=my_str[2]#访问某个下标
 
 #查找特定字的下标
 print(my_str.index('o'))
-
+#
 #.replace(字符串1,字符串2)
 new_my_str=my_str.replace("huo","HUO")#把子串全部替换了
 print(new_my_str)
